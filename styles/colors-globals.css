@@ -1,0 +1,17 @@
+:root{
+    --primary: #0d6efd;
+    --secondary: #6c757d;
+    --text: #212529;
+    --highlight: #ffc107;
+    --background: #f8f9fa;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary: #4C94BE;
+        --secondary: #0A2138;
+        --text: #f8f9fa;
+        --highlight: #B7F1F2;
+        --background: #021803;
+    }
+}

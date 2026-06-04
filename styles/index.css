@@ -1,0 +1,13 @@
+@import url("colors-globals.css");
+@import url("navbar.css");
+@import url("header.css");
+@import url("footer.css");
+
+body{
+    background-color: var(--background);
+    color: var(--text);
+}
+
+.content{
+    height: 100vh;
+}
