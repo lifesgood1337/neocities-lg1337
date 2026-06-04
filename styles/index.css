@@ -8,6 +8,33 @@ body{
     color: var(--text);
 }
 
+/* 1. Register the custom angle property so CSS knows how to animate it */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.container {
+  /* 2. Use the variable inside a conic gradient */
+  background: conic-gradient(from var(--angle), var(--primary) 1%, var(--background) 2%, var(--background) 9%, var(--secondary) 10%, var(--background) 11%, var(--background) 59%, var(--primary) 60%, var(--background) 61%);
+  animation: chase-glow 4s linear infinite;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+/* 3. Animate the registered custom property instead of the background */
+@keyframes chase-glow {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+    
 .content{
     height: 100vh;
+    background-color: var(--background);
+    color: var(--text);
 }
