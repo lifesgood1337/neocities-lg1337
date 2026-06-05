@@ -5,4 +5,33 @@ nav{
 
 nav .navbar-brand{
     color: var(--text);
+    animation: spin 10s infinite 5s forwards;
+    border: 0.2rem solid var(--primary);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: border 0.3s, color 0.3s;
+}
+
+nav .navbar-brand:hover, nav .navbar-brand:focus, nav .navbar-brand:focus-within{
+    color: var(--highlight);
+    animation: none;
+    border: 0.2rem solid var(--text);
+    outline: none !important;
+    cursor: default;
+}
+
+@keyframes spin {
+    0% {
+        transform:rotateX(0deg);
+    }
+    4% {
+        transform: rotateX(1440deg);
+    }
+
+    10% {
+        transform: rotateX(1800deg);
+    }
+    100% {
+        transform: rotateX(1800deg);
+    }
 }

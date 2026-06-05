@@ -4,7 +4,7 @@
 @import url("footer.css");
 
 body{
-    background-color: var(--background);
+    background-color: var(--body-background);
     color: var(--text);
 }
 
@@ -15,12 +15,19 @@ body{
   inherits: false;
 }
 
+.disclaimer{
+  background-color: var(--background);
+  color: var(--text);
+  border: 0.2rem solid var(--primary);
+  border-radius: 0.5rem;
+}
+
 .container {
   /* 2. Use the variable inside a conic gradient */
   background: conic-gradient(from var(--angle), var(--primary) 1%, var(--background) 2%, var(--background) 9%, var(--secondary) 10%, var(--background) 11%, var(--background) 59%, var(--primary) 60%, var(--background) 61%);
   animation: chase-glow 4s linear infinite;
   border-radius: 0.5rem;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 /* 3. Animate the registered custom property instead of the background */
@@ -34,7 +41,31 @@ body{
 }
     
 .content{
-    height: 100vh;
     background-color: var(--background);
     color: var(--text);
+    margin: auto;
+}
+
+p{
+  font-size: 1.2rem;
+}
+
+.row{
+  margin:0;
+}
+
+ul{
+  list-style-type: none;
+}
+
+ul a{
+  color: var(--text);
+  border: 0.2rem solid var(--primary);
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+ul:hover a{
+  color: var(--highlight);
+  border-color: var(--highlight);
 }
