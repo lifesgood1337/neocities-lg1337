@@ -1,37 +1,19 @@
-nav{
-    border-bottom: 1px solid var(--primary);
-    background-color: var(--secondary);
+.navbar {
+	background-color: var(--secondary-color);
+	color: var(--text-color);
+	border-bottom: 0.2rem solid var(--primary-color);
+	box-shadow: 0 0.2rem 0.4rem var(--accent-color);
 }
 
-nav .navbar-brand{
-    color: var(--text);
-    animation: spin 10s infinite 5s forwards;
-    border: 0.2rem solid var(--primary);
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    transition: border 0.3s, color 0.3s;
+.navbar-brand {
+	background-color: var(--primary-color);
+	color: var(--text-color);
+	transition: 0.2s;
+	border-radius: 0.4rem;
 }
 
-nav .navbar-brand:hover, nav .navbar-brand:focus, nav .navbar-brand:focus-within{
-    color: var(--highlight);
-    animation: none;
-    border: 0.2rem solid var(--text);
-    outline: none !important;
-    cursor: default;
-}
-
-@keyframes spin {
-    0% {
-        transform:rotateX(0deg);
-    }
-    4% {
-        transform: rotateX(1440deg);
-    }
-
-    10% {
-        transform: rotateX(1800deg);
-    }
-    100% {
-        transform: rotateX(1800deg);
-    }
+.navbar-brand:hover{
+	background-color: var(--primary-color);
+	color: var(--background-color);
+	box-shadow: 0 0 0.5rem var(--accent-color);
 }

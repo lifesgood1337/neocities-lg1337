@@ -1,8 +1,18 @@
-:root{
-    --primary: #4366A1;
-    --secondary: #1B446E;
-    --text: #F1FFF5;
-    --highlight: #A0BBD4; /*#ffc107*/
-    --background: #001C3B;
-    --body-background: #001328;
+:root {
+    --accent-color: #df5916;
+    --primary-color: #d54b07;
+    --secondary-color: #b8b8b8;
+    --text-color: #321c16;
+    --background-color: #e3e3e3;
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --accent-color: #e96422;
+        --primary-color: #f8702c;
+        --secondary-color: #484848;
+        --text-color: #e9d3cd;
+        --background-color: #1d1d1d;
+    }
+}
+
