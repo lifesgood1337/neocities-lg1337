@@ -1,11 +1,27 @@
-@import url("colors-globals.css");
-@import url("navbar.css");
+@import "globals.css";
 
 body{
-    background-color: var(--background-color);
-    color: var(--text-color);
+	color: var(--text-color);
+	background-color: var(--background-color);
 }
 
-.timeline-slot {
-	border-left: solid 0.5rem var(--primary-color);
+#content{
+	transition: 8s max-height ease-in-out;
+}
+
+#content img{
+	max-height: 20rem;
+	max-width: calc(20rem * (16 / 9));
+	border-radius: 0.5rem;
+}
+
+#intro-theme{
+	overflow: hidden;
+	transition: 6s max-height 1s;
+}
+
+#intro-container {
+    align-items: center;
+    justify-items: center;
+    min-height: 100vh;
 }

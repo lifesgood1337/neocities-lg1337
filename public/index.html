@@ -1,21 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting...</title>
-  <script>
-    (function() {
-      // Target path based on language match
-      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-      var target = lang.startsWith('hu') ? 'hu/' : 'en/';
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      // Immediate redirect using location.replace to avoid clogging browser history
-      window.location.replace(window.location.pathname.replace("index.html", target) + "index.html");
-    })();
-  </script>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Home - NeoBlock</title>
 </head>
 <body>
-  <p>Redirecting / Átirányítás...</p>
+	<div class="g-0 m-0 p-0 justify-content-center align-items-center d-flex flex-column">
+		<h1 id="intro-text" class="animation-base d-flex flex-column text-center">
+			Just a moment.
+		</h1>
+
+
+		<div id="intro-theme" class="animation-base d-flex flex-column align-items-center text-center" style="max-height: 2rem">
+			<h2 id="intro-theme-header" class="animation-base">Please select your desired theme.</h2>
+
+			<div id="intro-theme-select" class="animation-base">
+				<p>Selector.</p>
+				<button type="submit" id="intro-theme-submit">Continue</button>
+			</div>
+
+
+			<div id="intro-theme-reminder" class="animation-base">
+				Don't worry. You can change it later.
+			</div>
+		</div>
+
+		<div id="content" class="animation-base d-flex flex-column align-items-center">
+			<a class="card-wrapper d-flex flex-column align-items-center"  href="posts/test/index.html">
+				<div class="card">
+					<div class="row">
+						<img src="https://imgv3.fotor.com/images/side/three-different-placeholder-images-for-web-advertising.png" class="col-4">
+						<div class="col-8">
+							<h2>Short title</h2>
+							<p>
+								Description of a few sentences.
+								Lorem ipsum dolor sit amet consectetur adipiscing elit.
+								Amet consectetur adipiscing elit quisque faucibus ex sapien.
+								Quisque faucibus ex sapien vitae pellentesque sem placerat.
+								Vitae pellentesque sem placerat in id cursus mi.
+							</p>
+						</div>
+					</div>
+				</div>
+			</a>
+			
+			<div class="card-wrapper d-flex flex-column align-items-center">
+				<div class="card">
+					Content Card
+				</div>
+			</div>
+			
+			<div class="card-wrapper d-flex flex-column align-items-center">
+				<div class="card">
+					Content Card
+				</div>
+			</div>
+			
+			<div class="card-wrapper d-flex flex-column align-items-center">
+				<div class="card">
+					Content Card
+				</div>
+			</div>
+			
+			<div class="card-wrapper d-flex flex-column align-items-center">
+				<div class="card">
+					Content Card
+				</div>
+			</div>
+			
+			<div class="card-wrapper d-flex flex-column align-items-center">
+				<div class="card">
+					Content Card
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="scripts/intro.js"></script>
+<script src="scripts/show_cards.js"></script>
 </body>
 </html>

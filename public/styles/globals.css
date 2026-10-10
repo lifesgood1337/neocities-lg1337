@@ -1,0 +1,59 @@
+:root {
+    --accent-color: #df5916;
+    --primary-color: #d54b07;
+    --secondary-color: #b8b8b8;
+    --text-color: #321c16;
+    --background-color: #e3e3e3;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: oklch(0.945 0.011 44.86);
+        --background-color: oklch(0.124 0.018 33.575);
+        --primary-color: oklch(0.625 0.115 41.982);
+        --secondary-color: oklch(0.703 0.097 42.326);
+        --accent-color: oklch(0.57 0.169 35.881);
+    }
+}
+
+.animation-base{
+	max-height: 0;
+	opacity: 0;
+	transition: 1s;
+}
+
+.card{
+	max-height: 0;
+	padding-left: 1rem !important;
+	padding-right: 1rem !important;
+	padding-top: 1rem !important;
+	padding-bottom: 1rem !important;
+	border-radius: 1rem !important;
+	border: 0.2rem solid oklch(from var(--secondary-color) calc(l - 0.1) c h) !important;
+	background-color: oklch(from var(--primary-color) calc(l - 0.4) calc(c - 0.04) h / 75%) !important;
+	color: var(--text-color) !important;
+	backdrop-filter: blur(14px);
+	transition: 1.5s;
+	opacity: 0;
+	max-width: 60%;
+}
+
+.card-wrapper{
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding-top: 2rem;
+	padding-bottom: 0rem;
+	transition: 0.5s padding;
+	text-decoration: none;
+}
+
+.card-wrapper:hover{
+	padding-top: 0rem;
+	padding-bottom: 2rem;
+}
+
+.post{
+	opacity: 1 !important;
+	visibility: visible !important;
+	max-height: min-content;
+}
